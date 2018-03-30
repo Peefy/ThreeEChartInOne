@@ -1,5 +1,7 @@
 # ThreeEChartInOne
 
+Three baidu echarts in a carousel page.
+
 ## Required 
 
 * *jquery*
