@@ -343,27 +343,23 @@
                     }
                 },
                 visualMap: {
-                    show : false,
+                    show: false,
                     dimension: 0,
-                    pieces: [{
-                        lte: 60,
-                        color: 'green'
-                    }, {
-                        gt: 60,
-                        lte: 80,
-                        color: 'red'
-                    }, {
-                        gt: 80,
-                        lte: 140,
-                        color: 'green'
-                    }, {
-                        gt: 140,
-                        lte: 170,
-                        color: 'red'
-                    }, {
-                        gt: 170,
-                        color: 'purple'
-                    }]
+                    pieces:
+                        [{ gt: 1, lte: 49, color: 'red' },
+                        { gt: 49, lte: 93, color: 'orange' },
+                        { gt: 93, lte: 98, color: 'yellow' },
+                        { gt: 98, lte: 103, color: 'green' },
+                        { gt: 103, lte: 113, color: 'cyan' },
+                        { gt: 113, lte: 130, color: 'blue' },
+                        { gt: 130, lte: 133, color: 'purple' },
+                        { gt: 133, lte: 162, color: 'grey' },
+                        { gt: 162, lte: 168, color: 'white' },
+                        { gt: 168, lte: 195, color: 'brown' },
+                        { gt: 195, lte: 199, color: 'camel' },
+                        { gt: 199, lte: 208, color: 'chocolate' },
+                        { gt: 208, lte: 236, color: 'ivory' },
+                        { gt: 236, color: 'green' },]
                 },
                 series: [{
                     name: '用电量',
@@ -779,85 +775,85 @@
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 13, 0, 0],
             ];
             var schema = [{
-                    name: '汉前',
-                    index: 0,
-                    text: '汉前'
-                },
-                {
-                    name: '秦汉',
-                    index: 1,
-                    text: '秦汉'
-                },
-                {
-                    name: '三国',
-                    index: 2,
-                    text: '三国'
-                },
-                {
-                    name: '西晋',
-                    index: 3,
-                    text: '西晋'
-                },
-                {
-                    name: '东晋',
-                    index: 4,
-                    text: '东晋'
-                },
-                {
-                    name: '南北朝',
-                    index: 5,
-                    text: '南北朝'
-                },
-                {
-                    name: '隋',
-                    index: 6,
-                    text: '隋'
-                },
-                {
-                    name: '唐',
-                    index: 7,
-                    text: '唐'
-                },
-                {
-                    name: '五代',
-                    index: 8,
-                    text: '五代'
-                },
-                {
-                    name: '宋',
-                    index: 9,
-                    text: '宋'
-                },
-                {
-                    name: '宋元',
-                    index: 10,
-                    text: '宋元'
-                },
-                {
-                    name: '元',
-                    index: 11,
-                    text: '元'
-                },
-                {
-                    name: '明',
-                    index: 12,
-                    text: '明'
-                },
-                {
-                    name: '清',
-                    index: 13,
-                    text: '清'
-                },
-                {
-                    name: '民国',
-                    index: 14,
-                    text: '民国'
-                },
-                {
-                    name: '共和国',
-                    index: 15,
-                    text: '共和国'
-                },
+                name: '汉前',
+                index: 0,
+                text: '汉前'
+            },
+            {
+                name: '秦汉',
+                index: 1,
+                text: '秦汉'
+            },
+            {
+                name: '三国',
+                index: 2,
+                text: '三国'
+            },
+            {
+                name: '西晋',
+                index: 3,
+                text: '西晋'
+            },
+            {
+                name: '东晋',
+                index: 4,
+                text: '东晋'
+            },
+            {
+                name: '南北朝',
+                index: 5,
+                text: '南北朝'
+            },
+            {
+                name: '隋',
+                index: 6,
+                text: '隋'
+            },
+            {
+                name: '唐',
+                index: 7,
+                text: '唐'
+            },
+            {
+                name: '五代',
+                index: 8,
+                text: '五代'
+            },
+            {
+                name: '宋',
+                index: 9,
+                text: '宋'
+            },
+            {
+                name: '宋元',
+                index: 10,
+                text: '宋元'
+            },
+            {
+                name: '元',
+                index: 11,
+                text: '元'
+            },
+            {
+                name: '明',
+                index: 12,
+                text: '明'
+            },
+            {
+                name: '清',
+                index: 13,
+                text: '清'
+            },
+            {
+                name: '民国',
+                index: 14,
+                text: '民国'
+            },
+            {
+                name: '共和国',
+                index: 15,
+                text: '共和国'
+            },
             ];
             var lineStyle = {
                 normal: {
@@ -954,69 +950,69 @@
                     }
                 },
                 parallelAxis: [{
-                        dim: 0,
-                        name: schema[0].text
-                    },
-                    {
-                        dim: 1,
-                        name: schema[1].text
-                    },
-                    {
-                        dim: 2,
-                        name: schema[2].text
-                    },
-                    {
-                        dim: 3,
-                        name: schema[3].text
-                    },
-                    {
-                        dim: 4,
-                        name: schema[4].text
-                    },
-                    {
-                        dim: 5,
-                        name: schema[5].text
-                    },
-                    {
-                        dim: 6,
-                        name: schema[6].text
-                    },
-                    {
-                        dim: 7,
-                        name: schema[7].text
-                    },
-                    {
-                        dim: 8,
-                        name: schema[8].text
-                    },
-                    {
-                        dim: 9,
-                        name: schema[9].text
-                    },
-                    {
-                        dim: 10,
-                        name: schema[10].text
-                    },
-                    {
-                        dim: 11,
-                        name: schema[11].text
-                    },
-                    {
-                        dim: 12,
-                        name: schema[12].text
-                    },
-                    {
-                        dim: 13,
-                        name: schema[13].text
-                    },
-                    {
-                        dim: 14,
-                        name: schema[14].text
-                    },
-                    {
-                        dim: 15,
-                        name: schema[15].text
-                    },
+                    dim: 0,
+                    name: schema[0].text
+                },
+                {
+                    dim: 1,
+                    name: schema[1].text
+                },
+                {
+                    dim: 2,
+                    name: schema[2].text
+                },
+                {
+                    dim: 3,
+                    name: schema[3].text
+                },
+                {
+                    dim: 4,
+                    name: schema[4].text
+                },
+                {
+                    dim: 5,
+                    name: schema[5].text
+                },
+                {
+                    dim: 6,
+                    name: schema[6].text
+                },
+                {
+                    dim: 7,
+                    name: schema[7].text
+                },
+                {
+                    dim: 8,
+                    name: schema[8].text
+                },
+                {
+                    dim: 9,
+                    name: schema[9].text
+                },
+                {
+                    dim: 10,
+                    name: schema[10].text
+                },
+                {
+                    dim: 11,
+                    name: schema[11].text
+                },
+                {
+                    dim: 12,
+                    name: schema[12].text
+                },
+                {
+                    dim: 13,
+                    name: schema[13].text
+                },
+                {
+                    dim: 14,
+                    name: schema[14].text
+                },
+                {
+                    dim: 15,
+                    name: schema[15].text
+                },
                 ],
                 visualMap: {
                     show: true,
@@ -1064,281 +1060,281 @@
                     }
                 },
                 series: [{
-                        name: '卜筮者',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data0
-                    },
-                    {
-                        name: '藏书家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data1
-                    },
-                    {
-                        name: '道士',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data2
-                    },
-                    {
-                        name: '地理学家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data3
-                    },
-                    {
-                        name: '法律专家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data4
-                    },
-                    {
-                        name: '翻译',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data5
-                    },
-                    {
-                        name: '风水师',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data6
-                    },
-                    {
-                        name: '官员',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data7
-                    },
-                    {
-                        name: '贵族',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data8
-                    },
-                    {
-                        name: '画家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data9
-                    },
-                    {
-                        name: '皇族',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data10
-                    },
-                    {
-                        name: '鉴赏家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data11
-                    },
-                    {
-                        name: '教师',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data12
-                    },
-                    {
-                        name: '教育家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data13
-                    },
-                    {
-                        name: '金石学家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data14
-                    },
-                    {
-                        name: '经学家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data15
-                    },
-                    {
-                        name: '考据学家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data16
-                    },
-                    {
-                        name: '历算家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data17
-                    },
-                    {
-                        name: '炼丹家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data18
-                    },
-                    {
-                        name: '农民',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data19
-                    },
-                    {
-                        name: '农学家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data20
-                    },
-                    {
-                        name: '其它',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data21
-                    },
-                    {
-                        name: '棋手',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data22
-                    },
-                    {
-                        name: '儒者',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data23
-                    },
-                    {
-                        name: '僧人',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data24
-                    },
-                    {
-                        name: '商人',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data25
-                    },
-                    {
-                        name: '诗人',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data26
-                    },
-                    {
-                        name: '史学家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data27
-                    },
-                    {
-                        name: '士人',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data28
-                    },
-                    {
-                        name: '收藏家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data29
-                    },
-                    {
-                        name: '书法家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data30
-                    },
-                    {
-                        name: '数学家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data31
-                    },
-                    {
-                        name: '水利专家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data32
-                    },
-                    {
-                        name: '天文学家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data33
-                    },
-                    {
-                        name: '外命妇',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data34
-                    },
-                    {
-                        name: '文人',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data35
-                    },
-                    {
-                        name: '习武者',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data36
-                    },
-                    {
-                        name: '校堪学家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data37
-                    },
-                    {
-                        name: '学者',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data38
-                    },
-                    {
-                        name: '医者',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data39
-                    },
-                    {
-                        name: '阴阳家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data40
-                    },
-                    {
-                        name: '音乐家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data41
-                    },
-                    {
-                        name: '隐士',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data42
-                    },
-                    {
-                        name: '哲学家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data43
-                    },
-                    {
-                        name: '政治家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data44
-                    },
-                    {
-                        name: '篆刻家',
-                        type: 'parallel',
-                        lineStyle: lineStyle,
-                        data: data45
-                    },
+                    name: '卜筮者',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data0
+                },
+                {
+                    name: '藏书家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data1
+                },
+                {
+                    name: '道士',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data2
+                },
+                {
+                    name: '地理学家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data3
+                },
+                {
+                    name: '法律专家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data4
+                },
+                {
+                    name: '翻译',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data5
+                },
+                {
+                    name: '风水师',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data6
+                },
+                {
+                    name: '官员',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data7
+                },
+                {
+                    name: '贵族',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data8
+                },
+                {
+                    name: '画家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data9
+                },
+                {
+                    name: '皇族',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data10
+                },
+                {
+                    name: '鉴赏家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data11
+                },
+                {
+                    name: '教师',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data12
+                },
+                {
+                    name: '教育家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data13
+                },
+                {
+                    name: '金石学家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data14
+                },
+                {
+                    name: '经学家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data15
+                },
+                {
+                    name: '考据学家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data16
+                },
+                {
+                    name: '历算家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data17
+                },
+                {
+                    name: '炼丹家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data18
+                },
+                {
+                    name: '农民',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data19
+                },
+                {
+                    name: '农学家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data20
+                },
+                {
+                    name: '其它',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data21
+                },
+                {
+                    name: '棋手',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data22
+                },
+                {
+                    name: '儒者',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data23
+                },
+                {
+                    name: '僧人',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data24
+                },
+                {
+                    name: '商人',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data25
+                },
+                {
+                    name: '诗人',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data26
+                },
+                {
+                    name: '史学家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data27
+                },
+                {
+                    name: '士人',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data28
+                },
+                {
+                    name: '收藏家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data29
+                },
+                {
+                    name: '书法家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data30
+                },
+                {
+                    name: '数学家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data31
+                },
+                {
+                    name: '水利专家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data32
+                },
+                {
+                    name: '天文学家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data33
+                },
+                {
+                    name: '外命妇',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data34
+                },
+                {
+                    name: '文人',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data35
+                },
+                {
+                    name: '习武者',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data36
+                },
+                {
+                    name: '校堪学家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data37
+                },
+                {
+                    name: '学者',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data38
+                },
+                {
+                    name: '医者',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data39
+                },
+                {
+                    name: '阴阳家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data40
+                },
+                {
+                    name: '音乐家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data41
+                },
+                {
+                    name: '隐士',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data42
+                },
+                {
+                    name: '哲学家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data43
+                },
+                {
+                    name: '政治家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data44
+                },
+                {
+                    name: '篆刻家',
+                    type: 'parallel',
+                    lineStyle: lineStyle,
+                    data: data45
+                },
                 ]
             };
             myChart.setOption(option);
@@ -1356,1354 +1352,1354 @@
                     type: 'sunburst',
                     highlightPolicy: 'null',
                     data: [{
+                        name: '社会关系（笼统）',
+                        children: [{
                             name: '社会关系（笼统）',
                             children: [{
-                                    name: '社会关系（笼统）',
-                                    children: [{
-                                            name: '为Y之婢',
-                                            value: 22
-                                        },
-                                        {
-                                            name: '为Y之家仆',
-                                            value: 6
-                                        },
-                                        {
-                                            name: '蛊惑Y',
-                                            value: 1
-                                        },
-                                        {
-                                            name: '为Y明冤',
-                                            value: 23
-                                        },
-                                        {
-                                            name: '继承Y的职业',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '未详',
-                                            value: 370
-                                        },
-                                    ]
-                                },
-                                {
-                                    name: '社会交际',
-                                    children: [{
-                                            name: '为Y取名、字',
-                                            value: 13
-                                        },
-                                        {
-                                            name: '赠Y物',
-                                            value: 8
-                                        },
-                                        {
-                                            name: '向Y借书',
-                                            value: 5
-                                        },
-                                        {
-                                            name: '请Y作序、记',
-                                            value: 19
-                                        },
-                                        {
-                                            name: '献文、书于Y',
-                                            value: 25
-                                        },
-                                        {
-                                            name: '赠画',
-                                            value: 5
-                                        },
-                                        {
-                                            name: '送别',
-                                            value: 5
-                                        },
-                                        {
-                                            name: '代Y作文',
-                                            value: 23
-                                        },
-                                        {
-                                            name: '礼待',
-                                            value: 48
-                                        },
-                                        {
-                                            name: '受到Y拜访',
-                                            value: 91
-                                        },
-                                        {
-                                            name: '称道Y之节行',
-                                            value: 122
-                                        },
-                                    ]
-                                },
-                                {
-                                    name: '同为……之成员',
-                                    children: [{
-                                            name: '同会',
-                                            value: 65
-                                        },
-                                        {
-                                            name: '同乡',
-                                            value: 87
-                                        }
-                                    ]
-                                },
-                                {
-                                    name: '学术交往',
-                                    children: [{
-                                            name: '自认志业',
-                                            value: 32
-                                        },
-                                        {
-                                            name: '传学',
-                                            value: 62
-                                        },
-                                        {
-                                            name: '赞扬其学',
-                                            value: 44
-                                        },
-                                        {
-                                            name: '弟子礼',
-                                            value: 29
-                                        },
-                                        {
-                                            name: '宗其学',
-                                            value: 66
-                                        },
-                                        {
-                                            name: '传经',
-                                            value: 23
-                                        },
-                                        {
-                                            name: '合撰(编)著作',
-                                            value: 110
-                                        },
-                                        {
-                                            name: '私淑其学',
-                                            value: 39
-                                        },
-                                        {
-                                            name: '传授其学',
-                                            value: 5
-                                        },
-                                        {
-                                            name: '门人为其后代',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '采著述',
-                                            value: 4
-                                        },
-                                        {
-                                            name: '研读著作',
-                                            value: 13
-                                        },
-                                        {
-                                            name: '同道',
-                                            value: 110
-                                        },
-                                        {
-                                            name: '编辑其作品',
-                                            value: 30
-                                        },
-                                        {
-                                            name: '向其问学',
-                                            value: 50
-                                        },
-                                        {
-                                            name: '奏录其文',
-                                            value: 11
-                                        },
-                                    ]
-                                },
-                                {
-                                    name: '学术襄助',
-                                    children: [{
-                                            name: '聘主家之教席',
-                                            value: 17
-                                        },
-                                        {
-                                            name: '为其所聘执教族学',
-                                            value: 6
-                                        },
-                                        {
-                                            name: '聘执教官学、书院',
-                                            value: 37
-                                        },
-                                        {
-                                            name: '刊刻著述',
-                                            value: 14
-                                        },
-                                    ]
-                                },
-                                {
-                                    name: '学术主题相近',
-                                    children: [{
-                                            name: '研修理学',
-                                            value: 20
-                                        },
-                                        {
-                                            name: '论学',
-                                            value: 274
-                                        },
-                                        {
-                                            name: '从学',
-                                            value: 372
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '师生关系',
-                                    children: [{
-                                            name: '为门人',
-                                            value: 668
-                                        },
-                                        {
-                                            name: '为学生',
-                                            value: 1467
-                                        },
-                                        {
-                                            name: '为弟子',
-                                            value: 155
-                                        },
-                                        {
-                                            name: '从游',
-                                            value: 397
-                                        },
-                                        {
-                                            name: '为考官',
-                                            value: 26
-                                        },
-                                    ]
-                                }
+                                name: '为Y之婢',
+                                value: 22
+                            },
+                            {
+                                name: '为Y之家仆',
+                                value: 6
+                            },
+                            {
+                                name: '蛊惑Y',
+                                value: 1
+                            },
+                            {
+                                name: '为Y明冤',
+                                value: 23
+                            },
+                            {
+                                name: '继承Y的职业',
+                                value: 2
+                            },
+                            {
+                                name: '未详',
+                                value: 370
+                            },
                             ]
                         },
                         {
-                            name: '学术关系类',
-                            children: [
-
-                                {
-                                    name: '同为……之成员',
-                                    children: [{
-                                            name: '同年友',
-                                            value: 564
-                                        },
-                                        {
-                                            name: '其学派的成员',
-                                            value: 120
-                                        },
-                                        {
-                                            name: '同学、同门',
-                                            value: 335
-                                        },
-                                        {
-                                            name: '同场屋/同应举',
-                                            value: 13
-                                        },
-                                    ]
-                                },
-                                {
-                                    name: '文学艺术交往',
-                                    children: [{
-                                            name: '效法其文风',
-                                            value: 35
-                                        },
-                                        {
-                                            name: '称道诗作',
-                                            value: 96
-                                        },
-                                        {
-                                            name: '诗社成员',
-                                            value: 39
-                                        },
-                                        {
-                                            name: '称道文风',
-                                            value: 43
-                                        },
-                                        {
-                                            name: '以文章、学问受知于',
-                                            value: 58
-                                        },
-                                        {
-                                            name: '编辑其诗文',
-                                            value: 12
-                                        },
-                                        {
-                                            name: '模仿书风',
-                                            value: 14
-                                        },
-                                        {
-                                            name: '画风师法',
-                                            value: 160
-                                        },
-                                        {
-                                            name: '称道书、画',
-                                            value: 18
-                                        },
-                                        {
-                                            name: '校订著述',
-                                            value: 6
-                                        },
-                                        {
-                                            name: '献诗集',
-                                            value: 3
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '学术攻讦',
-                                    children: [{
-                                            name: '攻击道学',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '排其学',
-                                            value: 13
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '学术交往',
-                                    children: [{
-                                            name: '自认志业',
-                                            value: 32
-                                        },
-                                        {
-                                            name: '传学',
-                                            value: 62
-                                        },
-                                        {
-                                            name: '赞扬其学',
-                                            value: 44
-                                        },
-                                        {
-                                            name: '弟子礼',
-                                            value: 29
-                                        },
-                                        {
-                                            name: '宗其学',
-                                            value: 66
-                                        },
-                                        {
-                                            name: '传经',
-                                            value: 23
-                                        },
-                                        {
-                                            name: '合撰(编)著作',
-                                            value: 110
-                                        },
-                                        {
-                                            name: '私淑其学',
-                                            value: 39
-                                        },
-                                        {
-                                            name: '传授其学',
-                                            value: 5
-                                        },
-                                        {
-                                            name: '门人为其后代',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '采著述',
-                                            value: 4
-                                        },
-                                        {
-                                            name: '研读著作',
-                                            value: 13
-                                        },
-                                        {
-                                            name: '同道',
-                                            value: 110
-                                        },
-                                        {
-                                            name: '编辑其作品',
-                                            value: 30
-                                        },
-                                        {
-                                            name: '向其问学',
-                                            value: 50
-                                        },
-                                        {
-                                            name: '奏录其文',
-                                            value: 11
-                                        },
-                                    ]
-                                },
-                                {
-                                    name: '学术襄助',
-                                    children: [{
-                                            name: '聘主家之教席',
-                                            value: 17
-                                        },
-                                        {
-                                            name: '为其所聘执教族学',
-                                            value: 6
-                                        },
-                                        {
-                                            name: '聘执教官学、书院',
-                                            value: 37
-                                        },
-                                        {
-                                            name: '刊刻著述',
-                                            value: 14
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '学术主题相近',
-                                    children: [{
-                                            name: '研修理学',
-                                            value: 20
-                                        },
-                                        {
-                                            name: '论学',
-                                            value: 274
-                                        },
-                                        {
-                                            name: '从学',
-                                            value: 372
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '师生关系',
-                                    children: [{
-                                            name: '为门人',
-                                            value: 668
-                                        },
-                                        {
-                                            name: '为学生',
-                                            value: 1467
-                                        },
-                                        {
-                                            name: '为弟子',
-                                            value: 155
-                                        },
-                                        {
-                                            name: '从游',
-                                            value: 397
-                                        },
-                                        {
-                                            name: '为考官',
-                                            value: 26
-                                        },
-
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            name: '朋友关系类',
-                            children: [
-
-                                {
-                                    name: '朋友关系（笼统）',
-                                    children: [{
-                                            name: '与Y旅游',
-                                            value: 80
-                                        },
-                                        {
-                                            name: '帮助Y',
-                                            value: 25
-                                        },
-                                        {
-                                            name: '(暂时保留,待删除)',
-                                            value: 1
-                                        },
-                                        {
-                                            name: '从Y至贬所',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '与Y游',
-                                            value: 242
-                                        },
-                                        {
-                                            name: '相识',
-                                            value: 198
-                                        },
-                                        {
-                                            name: '友',
-                                            value: 1594
-                                        },
-
-                                    ]
-                                }
-
-                            ]
-                        },
-                        {
-                            name: '政治关系类',
+                            name: '社会交际',
                             children: [{
-                                    name: '官场关系（平级）',
-                                    children: [{
-                                            name: '同僚',
-                                            value: 548
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '官场关系（上司）',
-                                    children: [{
-                                            name: '以Y为侍女',
-                                            value: 8
-                                        },
-                                        {
-                                            name: '决定Y的科举次第',
-                                            value: 17
-                                        },
-                                        {
-                                            name: '部将为Y',
-                                            value: 249
-                                        },
-                                        {
-                                            name: '辟',
-                                            value: 110
-                                        },
-                                    ]
-                                },
-                                {
-                                    name: '官场关系（下属）',
-                                    children: [{
-                                            name: '谄事Y',
-                                            value: 16
-                                        },
-                                        {
-                                            name: '献策于Y',
-                                            value: 18
-                                        },
-                                        {
-                                            name: '为Y之潜邸旧人',
-                                            value: 8
-                                        },
-                                        {
-                                            name: '上司为Y',
-                                            value: 125
-                                        },
-                                        {
-                                            name: '为Y之幕僚',
-                                            value: 103
-                                        },
-
-
-                                    ]
-                                },
-                                {
-                                    name: '荐举保任',
-                                    children: [{
-                                            name: '为Y乞某事',
-                                            value: 63
-                                        },
-                                        {
-                                            name: '提议封赠Y',
-                                            value: 5
-                                        },
-                                        {
-                                            name: '遗奏推荐',
-                                            value: 1
-                                        },
-                                        {
-                                            name: '被Y推荐参加制科考试',
-                                            value: 10
-                                        },
-                                        {
-                                            name: '被Y推荐',
-                                            value: 1206
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '政治奥援',
-                                    children: [{
-                                            name: '政绩为Y所称道',
-                                            value: 299
-                                        },
-                                        {
-                                            name: '为Y所佑',
-                                            value: 11
-                                        },
-                                        {
-                                            name: '其同犯被指为Y',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '政见趋同',
-                                            value: 48
-                                        },
-                                        {
-                                            name: '喜爱',
-                                            value: 35
-                                        },
-                                        {
-                                            name: '以宦官事Y',
-                                            value: 4
-                                        },
-                                        {
-                                            name: '庆元被禁的「伪学」人士',
-                                            value: 55
-                                        },
-                                        {
-                                            name: '庆元党人的指控者',
-                                            value: 33
-                                        },
-                                        {
-                                            name: '王安石新法支持者',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '被指为Y之同犯',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '副Y出使',
-                                            value: 16
-                                        },
-                                        {
-                                            name: '支持Y的政策 [并入27]',
-                                            value: 4
-                                        },
-                                        {
-                                            name: '拥立Y',
-                                            value: 8
-                                        },
-                                        {
-                                            name: '在Y的主政期出仕 [暂时保留,待删除]',
-                                            value: 15
-                                        },
-                                        {
-                                            name: '因与Y的交往受牵连',
-                                            value: 43
-                                        },
-                                        {
-                                            name: '为Y之门客',
-                                            value: 170
-                                        },
-                                        {
-                                            name: '为Y之谋士',
-                                            value: 5
-                                        },
-                                        {
-                                            name: '王安石新法反对者',
-                                            value: 19
-                                        },
-                                        {
-                                            name: '得到Y的支持',
-                                            value: 303
-                                        },
-                                        {
-                                            name: '与Y结党',
-                                            value: 88
-                                        },
-                                        {
-                                            name: '被Y欣赏/器重',
-                                            value: 624
-                                        },
-                                        {
-                                            name: '党羽为Y',
-                                            value: 47
-                                        },
-                                        {
-                                            name: '恩主是Y',
-                                            value: 146
-                                        },
-                                        {
-                                            name: '是Y的恩主',
-                                            value: 147
-                                        },
-                                        {
-                                            name: '元符上书入籍者',
-                                            value: 217
-                                        },
-                                        {
-                                            name: '入元佑党籍者',
-                                            value: 121
-                                        },
-
-
-                                    ]
-                                },
-                                {
-                                    name: '政治对抗',
-                                    children: [{
-                                            name: '得罪Y',
-                                            value: 114
-                                        },
-                                        {
-                                            name: '反对Y称帝',
-                                            value: 18
-                                        },
-                                        {
-                                            name: '拒Y游说',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '被Y陷害',
-                                            value: 82
-                                        },
-                                        {
-                                            name: '废除Y的君位',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '拒为Y之党',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '逃离Y的统治区',
-                                            value: 4
-                                        },
-                                        {
-                                            name: '与Y争权',
-                                            value: 4
-                                        },
-                                        {
-                                            name: '批评',
-                                            value: 34
-                                        },
-                                        {
-                                            name: '拒为Y掾属',
-                                            value: 19
-                                        },
-                                        {
-                                            name: '遭Y蔡京势力排挤',
-                                            value: 4
-                                        },
-                                        {
-                                            name: '被Y（或追随者）杀害',
-                                            value: 84
-                                        },
-                                        {
-                                            name: '处决',
-                                            value: 10
-                                        },
-                                        {
-                                            name: '反对赦免',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '攻讦[并入15]',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '根据Y的命令被处决',
-                                            value: 11
-                                        },
-                                        {
-                                            name: '遭Y反韩侂胄势力排挤',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '被Y逮捕',
-                                            value: 22
-                                        },
-                                        {
-                                            name: '被Y鞫治',
-                                            value: 17
-                                        },
-                                        {
-                                            name: '遭Y反秦桧势力排挤',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '拒绝会面',
-                                            value: 27
-                                        },
-                                        {
-                                            name: '遭Y党羽的攻讦',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '反对/不支持Y的政策',
-                                            value: 275
-                                        },
-                                        {
-                                            name: '建议处决Y',
-                                            value: 14
-                                        },
-                                        {
-                                            name: '拒绝在Y主政的政府中任职',
-                                            value: 101
-                                        },
-                                        {
-                                            name: '遭Y新法支持者排挤',
-                                            value: 6
-                                        },
-                                        {
-                                            name: '忌/恶',
-                                            value: 104
-                                        },
-                                        {
-                                            name: '被Y以诗讽忤',
-                                            value: 5
-                                        },
-                                        {
-                                            name: '不合',
-                                            value: 162
-                                        },
-                                        {
-                                            name: '筹划谋杀',
-                                            value: 15
-                                        },
-                                        {
-                                            name: '排挤',
-                                            value: 197
-                                        },
-                                        {
-                                            name: '遭到Y的反对/攻讦',
-                                            value: 353
-                                        },
-                                        {
-                                            name: '被Y弹劾',
-                                            value: 405
-                                        },
-
-
-                                    ]
-                                },
-                                {
-                                    name: '政治关系（笼统）',
-                                    children: [{
-                                            name: '上奏论Y',
-                                            value: 84
-                                        },
-
-
-                                    ]
-                                }
+                                name: '为Y取名、字',
+                                value: 13
+                            },
+                            {
+                                name: '赠Y物',
+                                value: 8
+                            },
+                            {
+                                name: '向Y借书',
+                                value: 5
+                            },
+                            {
+                                name: '请Y作序、记',
+                                value: 19
+                            },
+                            {
+                                name: '献文、书于Y',
+                                value: 25
+                            },
+                            {
+                                name: '赠画',
+                                value: 5
+                            },
+                            {
+                                name: '送别',
+                                value: 5
+                            },
+                            {
+                                name: '代Y作文',
+                                value: 23
+                            },
+                            {
+                                name: '礼待',
+                                value: 48
+                            },
+                            {
+                                name: '受到Y拜访',
+                                value: 91
+                            },
+                            {
+                                name: '称道Y之节行',
+                                value: 122
+                            },
                             ]
                         },
                         {
-                            name: '著述关系类',
+                            name: '同为……之成员',
                             children: [{
-                                    name: '传记文字',
-                                    children: [{
-                                            name: '行状由Y所作',
-                                            value: 1123
-                                        },
-                                        {
-                                            name: '家传为Y所作',
-                                            value: 94
-                                        },
-                                        {
-                                            name: '为Y作年谱',
-                                            value: 106
-                                        },
-                                        {
-                                            name: '传记作者为Y',
-                                            value: 2482
-                                        },
-                                        {
-                                            name: '为Y撰写学术源宗',
-                                            value: 6
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '记咏文字',
-                                    children: [{
-                                            name: '祠记由Y所作',
-                                            value: 492
-                                        },
-                                        {
-                                            name: '为Y之生祠作记',
-                                            value: 75
-                                        },
-                                        {
-                                            name: '学记（书院记）由Y所作',
-                                            value: 513
-                                        },
-                                        {
-                                            name: '建筑物得到Y的题咏、记、命名',
-                                            value: 2392
-                                        },
-                                        {
-                                            name: '画赞(画像记)由Y所作',
-                                            value: 574
-                                        },
-                                        {
-                                            name: '佛寺记由Y所作',
-                                            value: 506
-                                        },
-                                        {
-                                            name: '义庄记由Y所作',
-                                            value: 17
-                                        },
-                                        {
-                                            name: '为Y作谥议',
-                                            value: 231
-                                        },
-                                        {
-                                            name: '庙碑记由Y所作',
-                                            value: 189
-                                        },
-                                        {
-                                            name: '为Y作世系碑记',
-                                            value: 237
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '礼仪文字',
-                                    children: [{
-                                            name: '为Y作道观记',
-                                            value: 59
-                                        },
-                                        {
-                                            name: '挽诗、词由Y所作',
-                                            value: 450
-                                        },
-                                        {
-                                            name: '哀辞由Y所作',
-                                            value: 506
-                                        },
-                                        {
-                                            name: '祝词由Y所作',
-                                            value: 127
-                                        },
-                                        {
-                                            name: '祭文由Y所作',
-                                            value: 3695
-                                        },
-                                        {
-                                            name: '为Y作哀辞 [并入167]',
-                                            value: 10
-                                        },
-
-
-                                    ]
-                                },
-                                {
-                                    name: '论说文字',
-                                    children: [{
-                                            name: '评论Y之著作',
-                                            value: 74
-                                        },
-                                        {
-                                            name: '为Y作名说',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '字说、名述由Y所作',
-                                            value: 456
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '墓志文字',
-                                    children: [{
-                                            name: '求他人（第三方）为Y作神道碑',
-                                            value: 1
-                                        },
-                                        {
-                                            name: '求Y为他人（第三方）作神道碑',
-                                            value: 1
-                                        },
-                                        {
-                                            name: '墓志铭系由Y向他人（第三方）求得',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '墓由Y题',
-                                            value: 6
-                                        },
-                                        {
-                                            name: '圹记由Y所作',
-                                            value: 64
-                                        },
-                                        {
-                                            name: '向Y求墓表',
-                                            value: 1
-                                        },
-                                        {
-                                            name: '墓表由Y所作',
-                                            value: 1616
-                                        },
-                                        {
-                                            name: '神道碑由Y所作',
-                                            value: 1099
-                                        },
-                                        {
-                                            name: '碑阴为Y所作',
-                                            value: 48
-                                        },
-                                        {
-                                            name: '为Y之神道碑作额篆',
-                                            value: 17
-                                        },
-                                        {
-                                            name: '神道碑的书法由Y所作',
-                                            value: 19
-                                        },
-                                        {
-                                            name: '求Y为他人（第三方）作墓志铭',
-                                            value: 43
-                                        },
-                                        {
-                                            name: '墓志铭由Y所作',
-                                            value: 10259
-                                        },
-
-
-                                    ]
-                                },
-                                {
-                                    name: '书札文字',
-                                    children: [{
-                                            name: '答Y启',
-                                            value: 61
-                                        },
-                                        {
-                                            name: '收到Y的启',
-                                            value: 160
-                                        },
-                                        {
-                                            name: '收到Y的答书',
-                                            value: 1221
-                                        },
-                                        {
-                                            name: '致书Y',
-                                            value: 3267
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '序跋文字',
-                                    children: [{
-                                            name: '书之题词由Y所作',
-                                            value: 246
-                                        },
-                                        {
-                                            name: '为Y之家传作序',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '祭文跋由Y所作',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '为Y的墓志铭作额篆',
-                                            value: 1
-                                        },
-                                        {
-                                            name: '为Y之家传作跋',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '为Y之行状作跋',
-                                            value: 7
-                                        },
-                                        {
-                                            name: '为Y所作诗文作序',
-                                            value: 784
-                                        },
-                                        {
-                                            name: '诗文跋由Y所作',
-                                            value: 1053
-                                        },
-                                        {
-                                            name: '为Y之收藏作跋',
-                                            value: 20
-                                        },
-                                        {
-                                            name: '题画诗文的作者为Y',
-                                            value: 44
-                                        },
-                                        {
-                                            name: '题Y的书帖',
-                                            value: 51
-                                        },
-                                        {
-                                            name: '墓表跋由Y所作',
-                                            value: 4
-                                        },
-                                        {
-                                            name: '墓表序由Y所作',
-                                            value: 18
-                                        },
-                                        {
-                                            name: '神道碑跋由Y所作',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '神道碑序由Y所作',
-                                            value: 7
-                                        },
-                                        {
-                                            name: '墓志铭序由Y所作',
-                                            value: 7
-                                        },
-                                        {
-                                            name: '为Y家谱作序',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '墓志铭由Y作跋',
-                                            value: 39
-                                        },
-                                        {
-                                            name: '家谱由Y作序',
-                                            value: 72
-                                        },
-                                        {
-                                            name: '为Y之义庄规矩作序',
-                                            value: 1
-                                        },
-                                        {
-                                            name: '书、画由Y作跋',
-                                            value: 855
-                                        },
-                                        {
-                                            name: '书跋由Y所作',
-                                            value: 4069
-                                        },
-                                        {
-                                            name: '为Y所著书作序',
-                                            value: 4978
-                                        },
-
-
-                                    ]
-                                },
-                                {
-                                    name: '应酬文字',
-                                    children: [{
-                                            name: '收到Y的赠诗、文',
-                                            value: 2905
-                                        },
-                                        {
-                                            name: '向Y致贺',
-                                            value: 623
-                                        },
-                                        {
-                                            name: '为Y举办的乡Ⅰ礼作序',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '临别得到Y所作赠言(送别诗、序)',
-                                            value: 3654
-                                        },
-                                        {
-                                            name: '相唱和',
-                                            value: 786
-                                        },
-
-                                    ]
-                                },
-                                {
-                                    name: '箴铭文字',
-                                    children: [{
-                                            name: '为Y篆匾额、器铭',
-                                            value: 75
-                                        },
-                                        {
-                                            name: '斋、堂铭由Y所作',
-                                            value: 123
-                                        },
-                                        {
-                                            name: '为Y作砚铭',
-                                            value: 33
-                                        }
-                                    ]
-                                }
+                                name: '同会',
+                                value: 65
+                            },
+                            {
+                                name: '同乡',
+                                value: 87
+                            }
                             ]
                         },
                         {
-                            name: '军事关系类',
-                            children: [
-
-                                {
-                                    name: '军事对抗',
-                                    children: [{
-                                            name: '军事对抗Y',
-                                            value: 62
-                                        },
-                                        {
-                                            name: '与Y共赴难',
-                                            value: 211
-                                        },
-                                        {
-                                            name: '结义',
-                                            value: 6
-                                        },
-                                        {
-                                            name: '降于',
-                                            value: 19
-                                        },
-                                        {
-                                            name: '败于',
-                                            value: 30
-                                        },
-                                        {
-                                            name: '叛军遭到Y的抵御或讨平',
-                                            value: 94
-                                        }
-
-                                    ]
-                                },
-                                {
-                                    name: '军事支持',
-                                    children: [{
-                                            name: '军事支持Y',
-                                            value: 99
-                                        },
-                                        {
-                                            name: '战友',
-                                            value: 108
-                                        },
-                                        {
-                                            name: '军队得到Y之赡给',
-                                            value: 2
-                                        },
-
-
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            name: '医疗关系类',
-                            children: [
-
-                                {
-                                    name: '医疗关系（笼统）',
-                                    children: [{
-                                            name: '以医术事Y',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '医愈',
-                                            value: 9
-                                        }
-
-                                    ]
-                                }
-
-                            ]
-                        },
-                        {
-                            name: '宗教关系类',
-                            children: [
-
-                                {
-                                    name: '宗教关系（笼统）',
-                                    children: [{
-                                        name: '为Y建立祠庙',
-                                        value: 32
-                                    }]
-                                }
-
-                            ]
-                        },
-                        {
-                            name: '家庭关系类',
+                            name: '学术交往',
                             children: [{
-                                    name: '家庭关系（笼统）',
-                                    children: [{
-                                            name: '与Y攀亲戚叙族属',
-                                            value: 1
-                                        },
-                                        {
-                                            name: '录Y为假子(养子)',
-                                            value: 5
-                                        },
-                                        {
-                                            name: '世交父执为Y',
-                                            value: 29
-                                        },
-                                        {
-                                            name: '为Y之义女',
-                                            value: 2
-                                        },
-                                        {
-                                            name: '妻被Y夺',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '拒绝Y的联姻建议',
-                                            value: 9
-                                        },
-                                        {
-                                            name: '被Y养育',
-                                            value: 14
-                                        }
-                                    ]
-                                }
-
+                                name: '自认志业',
+                                value: 32
+                            },
+                            {
+                                name: '传学',
+                                value: 62
+                            },
+                            {
+                                name: '赞扬其学',
+                                value: 44
+                            },
+                            {
+                                name: '弟子礼',
+                                value: 29
+                            },
+                            {
+                                name: '宗其学',
+                                value: 66
+                            },
+                            {
+                                name: '传经',
+                                value: 23
+                            },
+                            {
+                                name: '合撰(编)著作',
+                                value: 110
+                            },
+                            {
+                                name: '私淑其学',
+                                value: 39
+                            },
+                            {
+                                name: '传授其学',
+                                value: 5
+                            },
+                            {
+                                name: '门人为其后代',
+                                value: 3
+                            },
+                            {
+                                name: '采著述',
+                                value: 4
+                            },
+                            {
+                                name: '研读著作',
+                                value: 13
+                            },
+                            {
+                                name: '同道',
+                                value: 110
+                            },
+                            {
+                                name: '编辑其作品',
+                                value: 30
+                            },
+                            {
+                                name: '向其问学',
+                                value: 50
+                            },
+                            {
+                                name: '奏录其文',
+                                value: 11
+                            },
+                            ]
+                        },
+                        {
+                            name: '学术襄助',
+                            children: [{
+                                name: '聘主家之教席',
+                                value: 17
+                            },
+                            {
+                                name: '为其所聘执教族学',
+                                value: 6
+                            },
+                            {
+                                name: '聘执教官学、书院',
+                                value: 37
+                            },
+                            {
+                                name: '刊刻著述',
+                                value: 14
+                            },
+                            ]
+                        },
+                        {
+                            name: '学术主题相近',
+                            children: [{
+                                name: '研修理学',
+                                value: 20
+                            },
+                            {
+                                name: '论学',
+                                value: 274
+                            },
+                            {
+                                name: '从学',
+                                value: 372
+                            },
 
                             ]
                         },
                         {
-                            name: '财务关系类',
-                            children: [
-
-
-                                {
-                                    name: '财务关系（笼统）',
-                                    children: [{
-                                            name: '家仆为Y',
-                                            value: 4
-                                        },
-                                        {
-                                            name: '向Y购买',
-                                            value: 3
-                                        },
-                                        {
-                                            name: '给Y钱物',
-                                            value: 6
-                                        },
-                                        {
-                                            name: '丧事由Y经纪',
-                                            value: 11
-                                        },
-                                        {
-                                            name: '为Y所葬',
-                                            value: 16
-                                        }
-                                    ]
-                                }
+                            name: '师生关系',
+                            children: [{
+                                name: '为门人',
+                                value: 668
+                            },
+                            {
+                                name: '为学生',
+                                value: 1467
+                            },
+                            {
+                                name: '为弟子',
+                                value: 155
+                            },
+                            {
+                                name: '从游',
+                                value: 397
+                            },
+                            {
+                                name: '为考官',
+                                value: 26
+                            },
                             ]
                         }
+                        ]
+                    },
+                    {
+                        name: '学术关系类',
+                        children: [
+
+                            {
+                                name: '同为……之成员',
+                                children: [{
+                                    name: '同年友',
+                                    value: 564
+                                },
+                                {
+                                    name: '其学派的成员',
+                                    value: 120
+                                },
+                                {
+                                    name: '同学、同门',
+                                    value: 335
+                                },
+                                {
+                                    name: '同场屋/同应举',
+                                    value: 13
+                                },
+                                ]
+                            },
+                            {
+                                name: '文学艺术交往',
+                                children: [{
+                                    name: '效法其文风',
+                                    value: 35
+                                },
+                                {
+                                    name: '称道诗作',
+                                    value: 96
+                                },
+                                {
+                                    name: '诗社成员',
+                                    value: 39
+                                },
+                                {
+                                    name: '称道文风',
+                                    value: 43
+                                },
+                                {
+                                    name: '以文章、学问受知于',
+                                    value: 58
+                                },
+                                {
+                                    name: '编辑其诗文',
+                                    value: 12
+                                },
+                                {
+                                    name: '模仿书风',
+                                    value: 14
+                                },
+                                {
+                                    name: '画风师法',
+                                    value: 160
+                                },
+                                {
+                                    name: '称道书、画',
+                                    value: 18
+                                },
+                                {
+                                    name: '校订著述',
+                                    value: 6
+                                },
+                                {
+                                    name: '献诗集',
+                                    value: 3
+                                },
+
+                                ]
+                            },
+                            {
+                                name: '学术攻讦',
+                                children: [{
+                                    name: '攻击道学',
+                                    value: 3
+                                },
+                                {
+                                    name: '排其学',
+                                    value: 13
+                                },
+
+                                ]
+                            },
+                            {
+                                name: '学术交往',
+                                children: [{
+                                    name: '自认志业',
+                                    value: 32
+                                },
+                                {
+                                    name: '传学',
+                                    value: 62
+                                },
+                                {
+                                    name: '赞扬其学',
+                                    value: 44
+                                },
+                                {
+                                    name: '弟子礼',
+                                    value: 29
+                                },
+                                {
+                                    name: '宗其学',
+                                    value: 66
+                                },
+                                {
+                                    name: '传经',
+                                    value: 23
+                                },
+                                {
+                                    name: '合撰(编)著作',
+                                    value: 110
+                                },
+                                {
+                                    name: '私淑其学',
+                                    value: 39
+                                },
+                                {
+                                    name: '传授其学',
+                                    value: 5
+                                },
+                                {
+                                    name: '门人为其后代',
+                                    value: 3
+                                },
+                                {
+                                    name: '采著述',
+                                    value: 4
+                                },
+                                {
+                                    name: '研读著作',
+                                    value: 13
+                                },
+                                {
+                                    name: '同道',
+                                    value: 110
+                                },
+                                {
+                                    name: '编辑其作品',
+                                    value: 30
+                                },
+                                {
+                                    name: '向其问学',
+                                    value: 50
+                                },
+                                {
+                                    name: '奏录其文',
+                                    value: 11
+                                },
+                                ]
+                            },
+                            {
+                                name: '学术襄助',
+                                children: [{
+                                    name: '聘主家之教席',
+                                    value: 17
+                                },
+                                {
+                                    name: '为其所聘执教族学',
+                                    value: 6
+                                },
+                                {
+                                    name: '聘执教官学、书院',
+                                    value: 37
+                                },
+                                {
+                                    name: '刊刻著述',
+                                    value: 14
+                                },
+
+                                ]
+                            },
+                            {
+                                name: '学术主题相近',
+                                children: [{
+                                    name: '研修理学',
+                                    value: 20
+                                },
+                                {
+                                    name: '论学',
+                                    value: 274
+                                },
+                                {
+                                    name: '从学',
+                                    value: 372
+                                },
+
+                                ]
+                            },
+                            {
+                                name: '师生关系',
+                                children: [{
+                                    name: '为门人',
+                                    value: 668
+                                },
+                                {
+                                    name: '为学生',
+                                    value: 1467
+                                },
+                                {
+                                    name: '为弟子',
+                                    value: 155
+                                },
+                                {
+                                    name: '从游',
+                                    value: 397
+                                },
+                                {
+                                    name: '为考官',
+                                    value: 26
+                                },
+
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: '朋友关系类',
+                        children: [
+
+                            {
+                                name: '朋友关系（笼统）',
+                                children: [{
+                                    name: '与Y旅游',
+                                    value: 80
+                                },
+                                {
+                                    name: '帮助Y',
+                                    value: 25
+                                },
+                                {
+                                    name: '(暂时保留,待删除)',
+                                    value: 1
+                                },
+                                {
+                                    name: '从Y至贬所',
+                                    value: 2
+                                },
+                                {
+                                    name: '与Y游',
+                                    value: 242
+                                },
+                                {
+                                    name: '相识',
+                                    value: 198
+                                },
+                                {
+                                    name: '友',
+                                    value: 1594
+                                },
+
+                                ]
+                            }
+
+                        ]
+                    },
+                    {
+                        name: '政治关系类',
+                        children: [{
+                            name: '官场关系（平级）',
+                            children: [{
+                                name: '同僚',
+                                value: 548
+                            },
+
+                            ]
+                        },
+                        {
+                            name: '官场关系（上司）',
+                            children: [{
+                                name: '以Y为侍女',
+                                value: 8
+                            },
+                            {
+                                name: '决定Y的科举次第',
+                                value: 17
+                            },
+                            {
+                                name: '部将为Y',
+                                value: 249
+                            },
+                            {
+                                name: '辟',
+                                value: 110
+                            },
+                            ]
+                        },
+                        {
+                            name: '官场关系（下属）',
+                            children: [{
+                                name: '谄事Y',
+                                value: 16
+                            },
+                            {
+                                name: '献策于Y',
+                                value: 18
+                            },
+                            {
+                                name: '为Y之潜邸旧人',
+                                value: 8
+                            },
+                            {
+                                name: '上司为Y',
+                                value: 125
+                            },
+                            {
+                                name: '为Y之幕僚',
+                                value: 103
+                            },
+
+
+                            ]
+                        },
+                        {
+                            name: '荐举保任',
+                            children: [{
+                                name: '为Y乞某事',
+                                value: 63
+                            },
+                            {
+                                name: '提议封赠Y',
+                                value: 5
+                            },
+                            {
+                                name: '遗奏推荐',
+                                value: 1
+                            },
+                            {
+                                name: '被Y推荐参加制科考试',
+                                value: 10
+                            },
+                            {
+                                name: '被Y推荐',
+                                value: 1206
+                            },
+
+                            ]
+                        },
+                        {
+                            name: '政治奥援',
+                            children: [{
+                                name: '政绩为Y所称道',
+                                value: 299
+                            },
+                            {
+                                name: '为Y所佑',
+                                value: 11
+                            },
+                            {
+                                name: '其同犯被指为Y',
+                                value: 2
+                            },
+                            {
+                                name: '政见趋同',
+                                value: 48
+                            },
+                            {
+                                name: '喜爱',
+                                value: 35
+                            },
+                            {
+                                name: '以宦官事Y',
+                                value: 4
+                            },
+                            {
+                                name: '庆元被禁的「伪学」人士',
+                                value: 55
+                            },
+                            {
+                                name: '庆元党人的指控者',
+                                value: 33
+                            },
+                            {
+                                name: '王安石新法支持者',
+                                value: 3
+                            },
+                            {
+                                name: '被指为Y之同犯',
+                                value: 2
+                            },
+                            {
+                                name: '副Y出使',
+                                value: 16
+                            },
+                            {
+                                name: '支持Y的政策 [并入27]',
+                                value: 4
+                            },
+                            {
+                                name: '拥立Y',
+                                value: 8
+                            },
+                            {
+                                name: '在Y的主政期出仕 [暂时保留,待删除]',
+                                value: 15
+                            },
+                            {
+                                name: '因与Y的交往受牵连',
+                                value: 43
+                            },
+                            {
+                                name: '为Y之门客',
+                                value: 170
+                            },
+                            {
+                                name: '为Y之谋士',
+                                value: 5
+                            },
+                            {
+                                name: '王安石新法反对者',
+                                value: 19
+                            },
+                            {
+                                name: '得到Y的支持',
+                                value: 303
+                            },
+                            {
+                                name: '与Y结党',
+                                value: 88
+                            },
+                            {
+                                name: '被Y欣赏/器重',
+                                value: 624
+                            },
+                            {
+                                name: '党羽为Y',
+                                value: 47
+                            },
+                            {
+                                name: '恩主是Y',
+                                value: 146
+                            },
+                            {
+                                name: '是Y的恩主',
+                                value: 147
+                            },
+                            {
+                                name: '元符上书入籍者',
+                                value: 217
+                            },
+                            {
+                                name: '入元佑党籍者',
+                                value: 121
+                            },
+
+
+                            ]
+                        },
+                        {
+                            name: '政治对抗',
+                            children: [{
+                                name: '得罪Y',
+                                value: 114
+                            },
+                            {
+                                name: '反对Y称帝',
+                                value: 18
+                            },
+                            {
+                                name: '拒Y游说',
+                                value: 3
+                            },
+                            {
+                                name: '被Y陷害',
+                                value: 82
+                            },
+                            {
+                                name: '废除Y的君位',
+                                value: 3
+                            },
+                            {
+                                name: '拒为Y之党',
+                                value: 3
+                            },
+                            {
+                                name: '逃离Y的统治区',
+                                value: 4
+                            },
+                            {
+                                name: '与Y争权',
+                                value: 4
+                            },
+                            {
+                                name: '批评',
+                                value: 34
+                            },
+                            {
+                                name: '拒为Y掾属',
+                                value: 19
+                            },
+                            {
+                                name: '遭Y蔡京势力排挤',
+                                value: 4
+                            },
+                            {
+                                name: '被Y（或追随者）杀害',
+                                value: 84
+                            },
+                            {
+                                name: '处决',
+                                value: 10
+                            },
+                            {
+                                name: '反对赦免',
+                                value: 2
+                            },
+                            {
+                                name: '攻讦[并入15]',
+                                value: 2
+                            },
+                            {
+                                name: '根据Y的命令被处决',
+                                value: 11
+                            },
+                            {
+                                name: '遭Y反韩侂胄势力排挤',
+                                value: 3
+                            },
+                            {
+                                name: '被Y逮捕',
+                                value: 22
+                            },
+                            {
+                                name: '被Y鞫治',
+                                value: 17
+                            },
+                            {
+                                name: '遭Y反秦桧势力排挤',
+                                value: 3
+                            },
+                            {
+                                name: '拒绝会面',
+                                value: 27
+                            },
+                            {
+                                name: '遭Y党羽的攻讦',
+                                value: 2
+                            },
+                            {
+                                name: '反对/不支持Y的政策',
+                                value: 275
+                            },
+                            {
+                                name: '建议处决Y',
+                                value: 14
+                            },
+                            {
+                                name: '拒绝在Y主政的政府中任职',
+                                value: 101
+                            },
+                            {
+                                name: '遭Y新法支持者排挤',
+                                value: 6
+                            },
+                            {
+                                name: '忌/恶',
+                                value: 104
+                            },
+                            {
+                                name: '被Y以诗讽忤',
+                                value: 5
+                            },
+                            {
+                                name: '不合',
+                                value: 162
+                            },
+                            {
+                                name: '筹划谋杀',
+                                value: 15
+                            },
+                            {
+                                name: '排挤',
+                                value: 197
+                            },
+                            {
+                                name: '遭到Y的反对/攻讦',
+                                value: 353
+                            },
+                            {
+                                name: '被Y弹劾',
+                                value: 405
+                            },
+
+
+                            ]
+                        },
+                        {
+                            name: '政治关系（笼统）',
+                            children: [{
+                                name: '上奏论Y',
+                                value: 84
+                            },
+
+
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                        name: '著述关系类',
+                        children: [{
+                            name: '传记文字',
+                            children: [{
+                                name: '行状由Y所作',
+                                value: 1123
+                            },
+                            {
+                                name: '家传为Y所作',
+                                value: 94
+                            },
+                            {
+                                name: '为Y作年谱',
+                                value: 106
+                            },
+                            {
+                                name: '传记作者为Y',
+                                value: 2482
+                            },
+                            {
+                                name: '为Y撰写学术源宗',
+                                value: 6
+                            },
+
+                            ]
+                        },
+                        {
+                            name: '记咏文字',
+                            children: [{
+                                name: '祠记由Y所作',
+                                value: 492
+                            },
+                            {
+                                name: '为Y之生祠作记',
+                                value: 75
+                            },
+                            {
+                                name: '学记（书院记）由Y所作',
+                                value: 513
+                            },
+                            {
+                                name: '建筑物得到Y的题咏、记、命名',
+                                value: 2392
+                            },
+                            {
+                                name: '画赞(画像记)由Y所作',
+                                value: 574
+                            },
+                            {
+                                name: '佛寺记由Y所作',
+                                value: 506
+                            },
+                            {
+                                name: '义庄记由Y所作',
+                                value: 17
+                            },
+                            {
+                                name: '为Y作谥议',
+                                value: 231
+                            },
+                            {
+                                name: '庙碑记由Y所作',
+                                value: 189
+                            },
+                            {
+                                name: '为Y作世系碑记',
+                                value: 237
+                            },
+
+                            ]
+                        },
+                        {
+                            name: '礼仪文字',
+                            children: [{
+                                name: '为Y作道观记',
+                                value: 59
+                            },
+                            {
+                                name: '挽诗、词由Y所作',
+                                value: 450
+                            },
+                            {
+                                name: '哀辞由Y所作',
+                                value: 506
+                            },
+                            {
+                                name: '祝词由Y所作',
+                                value: 127
+                            },
+                            {
+                                name: '祭文由Y所作',
+                                value: 3695
+                            },
+                            {
+                                name: '为Y作哀辞 [并入167]',
+                                value: 10
+                            },
+
+
+                            ]
+                        },
+                        {
+                            name: '论说文字',
+                            children: [{
+                                name: '评论Y之著作',
+                                value: 74
+                            },
+                            {
+                                name: '为Y作名说',
+                                value: 2
+                            },
+                            {
+                                name: '字说、名述由Y所作',
+                                value: 456
+                            },
+
+                            ]
+                        },
+                        {
+                            name: '墓志文字',
+                            children: [{
+                                name: '求他人（第三方）为Y作神道碑',
+                                value: 1
+                            },
+                            {
+                                name: '求Y为他人（第三方）作神道碑',
+                                value: 1
+                            },
+                            {
+                                name: '墓志铭系由Y向他人（第三方）求得',
+                                value: 2
+                            },
+                            {
+                                name: '墓由Y题',
+                                value: 6
+                            },
+                            {
+                                name: '圹记由Y所作',
+                                value: 64
+                            },
+                            {
+                                name: '向Y求墓表',
+                                value: 1
+                            },
+                            {
+                                name: '墓表由Y所作',
+                                value: 1616
+                            },
+                            {
+                                name: '神道碑由Y所作',
+                                value: 1099
+                            },
+                            {
+                                name: '碑阴为Y所作',
+                                value: 48
+                            },
+                            {
+                                name: '为Y之神道碑作额篆',
+                                value: 17
+                            },
+                            {
+                                name: '神道碑的书法由Y所作',
+                                value: 19
+                            },
+                            {
+                                name: '求Y为他人（第三方）作墓志铭',
+                                value: 43
+                            },
+                            {
+                                name: '墓志铭由Y所作',
+                                value: 10259
+                            },
+
+
+                            ]
+                        },
+                        {
+                            name: '书札文字',
+                            children: [{
+                                name: '答Y启',
+                                value: 61
+                            },
+                            {
+                                name: '收到Y的启',
+                                value: 160
+                            },
+                            {
+                                name: '收到Y的答书',
+                                value: 1221
+                            },
+                            {
+                                name: '致书Y',
+                                value: 3267
+                            },
+
+                            ]
+                        },
+                        {
+                            name: '序跋文字',
+                            children: [{
+                                name: '书之题词由Y所作',
+                                value: 246
+                            },
+                            {
+                                name: '为Y之家传作序',
+                                value: 2
+                            },
+                            {
+                                name: '祭文跋由Y所作',
+                                value: 2
+                            },
+                            {
+                                name: '为Y的墓志铭作额篆',
+                                value: 1
+                            },
+                            {
+                                name: '为Y之家传作跋',
+                                value: 3
+                            },
+                            {
+                                name: '为Y之行状作跋',
+                                value: 7
+                            },
+                            {
+                                name: '为Y所作诗文作序',
+                                value: 784
+                            },
+                            {
+                                name: '诗文跋由Y所作',
+                                value: 1053
+                            },
+                            {
+                                name: '为Y之收藏作跋',
+                                value: 20
+                            },
+                            {
+                                name: '题画诗文的作者为Y',
+                                value: 44
+                            },
+                            {
+                                name: '题Y的书帖',
+                                value: 51
+                            },
+                            {
+                                name: '墓表跋由Y所作',
+                                value: 4
+                            },
+                            {
+                                name: '墓表序由Y所作',
+                                value: 18
+                            },
+                            {
+                                name: '神道碑跋由Y所作',
+                                value: 2
+                            },
+                            {
+                                name: '神道碑序由Y所作',
+                                value: 7
+                            },
+                            {
+                                name: '墓志铭序由Y所作',
+                                value: 7
+                            },
+                            {
+                                name: '为Y家谱作序',
+                                value: 2
+                            },
+                            {
+                                name: '墓志铭由Y作跋',
+                                value: 39
+                            },
+                            {
+                                name: '家谱由Y作序',
+                                value: 72
+                            },
+                            {
+                                name: '为Y之义庄规矩作序',
+                                value: 1
+                            },
+                            {
+                                name: '书、画由Y作跋',
+                                value: 855
+                            },
+                            {
+                                name: '书跋由Y所作',
+                                value: 4069
+                            },
+                            {
+                                name: '为Y所著书作序',
+                                value: 4978
+                            },
+
+
+                            ]
+                        },
+                        {
+                            name: '应酬文字',
+                            children: [{
+                                name: '收到Y的赠诗、文',
+                                value: 2905
+                            },
+                            {
+                                name: '向Y致贺',
+                                value: 623
+                            },
+                            {
+                                name: '为Y举办的乡Ⅰ礼作序',
+                                value: 2
+                            },
+                            {
+                                name: '临别得到Y所作赠言(送别诗、序)',
+                                value: 3654
+                            },
+                            {
+                                name: '相唱和',
+                                value: 786
+                            },
+
+                            ]
+                        },
+                        {
+                            name: '箴铭文字',
+                            children: [{
+                                name: '为Y篆匾额、器铭',
+                                value: 75
+                            },
+                            {
+                                name: '斋、堂铭由Y所作',
+                                value: 123
+                            },
+                            {
+                                name: '为Y作砚铭',
+                                value: 33
+                            }
+                            ]
+                        }
+                        ]
+                    },
+                    {
+                        name: '军事关系类',
+                        children: [
+
+                            {
+                                name: '军事对抗',
+                                children: [{
+                                    name: '军事对抗Y',
+                                    value: 62
+                                },
+                                {
+                                    name: '与Y共赴难',
+                                    value: 211
+                                },
+                                {
+                                    name: '结义',
+                                    value: 6
+                                },
+                                {
+                                    name: '降于',
+                                    value: 19
+                                },
+                                {
+                                    name: '败于',
+                                    value: 30
+                                },
+                                {
+                                    name: '叛军遭到Y的抵御或讨平',
+                                    value: 94
+                                }
+
+                                ]
+                            },
+                            {
+                                name: '军事支持',
+                                children: [{
+                                    name: '军事支持Y',
+                                    value: 99
+                                },
+                                {
+                                    name: '战友',
+                                    value: 108
+                                },
+                                {
+                                    name: '军队得到Y之赡给',
+                                    value: 2
+                                },
+
+
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        name: '医疗关系类',
+                        children: [
+
+                            {
+                                name: '医疗关系（笼统）',
+                                children: [{
+                                    name: '以医术事Y',
+                                    value: 2
+                                },
+                                {
+                                    name: '医愈',
+                                    value: 9
+                                }
+
+                                ]
+                            }
+
+                        ]
+                    },
+                    {
+                        name: '宗教关系类',
+                        children: [
+
+                            {
+                                name: '宗教关系（笼统）',
+                                children: [{
+                                    name: '为Y建立祠庙',
+                                    value: 32
+                                }]
+                            }
+
+                        ]
+                    },
+                    {
+                        name: '家庭关系类',
+                        children: [{
+                            name: '家庭关系（笼统）',
+                            children: [{
+                                name: '与Y攀亲戚叙族属',
+                                value: 1
+                            },
+                            {
+                                name: '录Y为假子(养子)',
+                                value: 5
+                            },
+                            {
+                                name: '世交父执为Y',
+                                value: 29
+                            },
+                            {
+                                name: '为Y之义女',
+                                value: 2
+                            },
+                            {
+                                name: '妻被Y夺',
+                                value: 3
+                            },
+                            {
+                                name: '拒绝Y的联姻建议',
+                                value: 9
+                            },
+                            {
+                                name: '被Y养育',
+                                value: 14
+                            }
+                            ]
+                        }
+
+
+                        ]
+                    },
+                    {
+                        name: '财务关系类',
+                        children: [
+
+
+                            {
+                                name: '财务关系（笼统）',
+                                children: [{
+                                    name: '家仆为Y',
+                                    value: 4
+                                },
+                                {
+                                    name: '向Y购买',
+                                    value: 3
+                                },
+                                {
+                                    name: '给Y钱物',
+                                    value: 6
+                                },
+                                {
+                                    name: '丧事由Y经纪',
+                                    value: 11
+                                },
+                                {
+                                    name: '为Y所葬',
+                                    value: 16
+                                }
+                                ]
+                            }
+                        ]
+                    }
                     ],
                     radius: [0, '95%'],
                     levels: [{},
-                        {
-                            r0: '15%',
-                            r: '30%',
-                            itemStyle: {
-                                borderWidth: 2
-                            },
+                    {
+                        r0: '15%',
+                        r: '30%',
+                        itemStyle: {
+                            borderWidth: 2
                         },
-                        {
-                            r0: '32%',
-                            r: '70%',
-                            label: {
-                                align: 'right',
-                                fontSize: 15
-                            }
-                        },
-                        {
-                            r0: '73%',
-                            r: '75%',
-                            label: {
-                                show: false,
-                                position: 'outside',
-                                padding: 10,
-                                silent: true,
-                                fontSize: 10
-                            },
-                            itemStyle: {
-                                borderWidth: 3
-                            }
+                    },
+                    {
+                        r0: '32%',
+                        r: '70%',
+                        label: {
+                            align: 'right',
+                            fontSize: 15
                         }
+                    },
+                    {
+                        r0: '73%',
+                        r: '75%',
+                        label: {
+                            show: false,
+                            position: 'outside',
+                            padding: 10,
+                            silent: true,
+                            fontSize: 10
+                        },
+                        itemStyle: {
+                            borderWidth: 3
+                        }
+                    }
                     ]
                 }
             };
