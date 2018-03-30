@@ -59,6 +59,13 @@
                         saveAsImage: {}
                     }
                 },
+                dataZoom: [{
+                    startValue: '0'
+                },
+                {
+                    type: 'inside'
+                }
+                ],
                 xAxis: {
                     type: 'category',
                     boundaryGap: false,
@@ -336,7 +343,7 @@
                     }
                 },
                 visualMap: {
-                    show: false,
+                    show : false,
                     dimension: 0,
                     pieces: [{
                         lte: 60,
