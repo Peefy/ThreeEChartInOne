@@ -8,12 +8,13 @@
     <script src="./lib/jquery/dist/jquery.js"></script>
     <script src="./lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="./js/site.js" asp-append-version="true"></script>
-    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/site.css" />
     <link rel="stylesheet" href="./css/site.min.css" />
     <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="./css/site.css" />
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css" />
 
     <body>
+        <h2>This is Echart demo.</h2>
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="600000">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -45,12 +46,8 @@
             var myChart = echarts.init(document.getElementById('main1'));
             // 指定图表的配置项和数据
             option = {
-
-
                 xAxis: {
-
                     type: 'category',
-
                     data:
                         [
                             '-700',
@@ -320,15 +317,11 @@
 
 
                 },
-
                 yAxis: {
-
                     splitbar: {
                         show: false
                     }
-
                 },
-
                 dataZoom: [{
                     startValue: '1340'
                 },
@@ -336,12 +329,9 @@
                     type: 'inside'
                 }
                 ],
-
                 visualMap: {
                     top: 10,
-
                     right: 10,
-
                     pieces:
                         [
                             {
@@ -365,14 +355,11 @@
                                 gt: 8000, color: '#7e0023'
                             }
                         ],
-
                     outOfRange: {
                         color: '#999'
                     }
-
                 },
                 series: {
-
                     data:
                         [
                             2,
@@ -636,13 +623,9 @@
                             139,
                             15,
                             4],
-
                     type: 'bar',
-
                     markline: {
-
                         silent: true,
-
                         data: [
                             {
                                 yAxis: 500
@@ -660,17 +643,9 @@
                                 yAxis: 8000
                             }
                         ]
-
                     }
-
                 }
-
             };
-
-
-
-
-
             myChart.setOption(option);   
         </script>
         <script type="text/javascript">
@@ -723,14 +698,7 @@
             var data43 = [[0, 35, 0, 0, 0, 0, 0, 0, 0, 387, 63, 34, 78, 16, 0, 0],];
             var data44 = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 9, 1, 0, 0],];
             var data45 = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 13, 0, 0],];
-
-
-
-
-
-
             var schema = [
-
                 { name: '汉前', index: 0, text: '汉前' },
                 { name: '秦汉', index: 1, text: '秦汉' },
                 { name: '三国', index: 2, text: '三国' },
@@ -747,37 +715,19 @@
                 { name: '清', index: 13, text: '清' },
                 { name: '民国', index: 14, text: '民国' },
                 { name: '共和国', index: 15, text: '共和国' },
-
-
             ];
-
-
-
-
-
             var lineStyle = {
                 normal: {
                     width: 1,
                     opacity: 3
                 }
             };
-
-
-
-
-
-
-
             option = {
-
                 backgroundColor: '#333',
-
                 legend: {
-
                     left: 80,
                     right: 100,
                     bottom: 5,
-
                     data: ['卜筮者',
                         '藏书家',
                         '道士',
@@ -825,42 +775,23 @@
                         '政治家',
                         '篆刻家',
                     ],
-
                     itemGap: 10,
-
                     textStyle: {
-
                         color: '#fff',
-
                         fontSize: 14
-
                     }
-
                 },
-
-
-
                 tooltip: {
-
                     padding: 10,
-
                     backgroundColor: '#222',
-
                     borderColor: '#777',
-
                     borderWidth: 1,
-
                     formatter: function (obj) {
-
                         var value = obj[0].value;
-
                         return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">'
-
                             + obj[0].seriesName + ' ' + value[0] + '日期：'
                             + value[7]
-
                             + '</div>'
-
                             + schema[1].text + '：' + value[1] + '<br>'
                             + schema[2].text + '：' + value[2] + '<br>'
                             + schema[3].text + '：' + value[3] + '<br>'
@@ -880,18 +811,8 @@
                             ;
                     }
                 },
-
-
-
-
-
-
-
-
-
                 parallelAxis:
                     [
-
                         { dim: 0, name: schema[0].text },
                         { dim: 1, name: schema[1].text },
                         { dim: 2, name: schema[2].text },
@@ -908,98 +829,52 @@
                         { dim: 13, name: schema[13].text },
                         { dim: 14, name: schema[14].text },
                         { dim: 15, name: schema[15].text },
-
                     ],
-
-
-
                 visualMap:
                     {
-
                         show: true,
-
                         min: 0,
-
-
                         dimension: 2,
-
                         left: 30,
                         bottom: 100,
                         inRange: {
                             color: ['#663333', '#990033', '#993333', '#CC3333', '#FF6666', '#FF9966', '#FFCC99', '#CCFFCC', '#66CCCC', '#50a3ba'].reverse(),
                         }
-
                     },
-
-
-
-
-
-
-
-
                 parallel:
                     {
-
                         left: '5%',
-
                         right: '8%',
-
                         bottom: 100,
-
                         parallelAxisDefault:
                             {
-
                                 type: 'value',
-
                                 name: '朝代',
-
                                 nameLocation: 'end',
-
                                 nameGap: 20,
-
                                 nameTextStyle: {
-
                                     color: '#ddd',
-
                                     fontSize: 15
-
                                 },
-
                                 axisLine: {
-
                                     lineStyle: {
                                         color: '#aaa'
                                     }
-
                                 },
-
                                 axisTick: {
-
                                     lineStyle: { color: '#777' }
-
                                 },
-
                                 splitLine: {
                                     show: false
                                 },
-
                                 axisLabel: {
-
                                     textStyle: {
                                         color: '#fff'
                                     }
-
                                 }
-
                             }
-
                     },
-
-
-
                 series: [
-
                     { name: '卜筮者', type: 'parallel', lineStyle: lineStyle, data: data0 },
                     { name: '藏书家', type: 'parallel', lineStyle: lineStyle, data: data1 },
                     { name: '道士', type: 'parallel', lineStyle: lineStyle, data: data2 },
@@ -1046,27 +921,15 @@
                     { name: '哲学家', type: 'parallel', lineStyle: lineStyle, data: data43 },
                     { name: '政治家', type: 'parallel', lineStyle: lineStyle, data: data44 },
                     { name: '篆刻家', type: 'parallel', lineStyle: lineStyle, data: data45 },
-
-
                 ]
-
-
             };
-
             myChart.setOption(option);   
         </script>
         <script type="text/javascript">
             // 基于准备好的dom,初始化echarts实例
             var myChart = echarts.init(document.getElementById('main3'));
             // 指定图表的配置项和数据
-
-
-
             var option = {
-
-
-
-
                 tooltip: {
                     trigger: 'item',
                     formatter: "{b} : {c} "
@@ -1074,20 +937,10 @@
                 series: {
                     type: 'sunburst',
                     highlightPolicy: 'null',
-
-
                     data: [
-
-
-
                         {
                             name: '社会关系（笼统）',
                             children: [
-
-
-
-
-
                                 {
                                     name: '社会关系（笼统）',
                                     children:
@@ -1099,9 +952,7 @@
                                             { name: '继承Y的职业', value: 2 },
                                             { name: '未详', value: 370 },
                                         ]
-                                }
-                                ,
-
+                                },
                                 {
                                     name: '社会交际',
                                     children:
@@ -1117,23 +968,16 @@
                                             { name: '礼待', value: 48 },
                                             { name: '受到Y拜访', value: 91 },
                                             { name: '称道Y之节行', value: 122 },
-
                                         ]
-                                }
-                                ,
-
+                                },
                                 {
                                     name: '同为……之成员',
                                     children:
                                         [
                                             { name: '同会', value: 65 },
                                             { name: '同乡', value: 87 }
-
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '学术交往',
                                     children:
@@ -1155,11 +999,7 @@
                                             { name: '向其问学', value: 50 },
                                             { name: '奏录其文', value: 11 },
                                         ]
-                                }
-                                ,
-
-
-
+                                },
                                 {
                                     name: '学术襄助',
                                     children:
@@ -1168,12 +1008,8 @@
                                             { name: '为其所聘执教族学', value: 6 },
                                             { name: '聘执教官学、书院', value: 37 },
                                             { name: '刊刻著述', value: 14 },
-
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '学术主题相近',
                                     children:
@@ -1183,10 +1019,7 @@
                                             { name: '从学', value: 372 },
 
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '师生关系',
                                     children:
@@ -1198,13 +1031,8 @@
                                             { name: '为考官', value: 26 },
                                         ]
                                 }
-
                             ]
-                        }
-                        ,
-
-
-
+                        },
                         {
                             name: '学术关系类',
                             children: [
@@ -1218,9 +1046,7 @@
                                             { name: '同学、同门', value: 335 },
                                             { name: '同场屋/同应举', value: 13 },
                                         ]
-                                }
-                                ,
-
+                                },
                                 {
                                     name: '文学艺术交往',
                                     children:
@@ -1238,9 +1064,7 @@
                                             { name: '献诗集', value: 3 },
 
                                         ]
-                                }
-                                ,
-
+                                },
                                 {
                                     name: '学术攻讦',
                                     children:
@@ -1249,10 +1073,7 @@
                                             { name: '排其学', value: 13 },
 
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '学术交往',
                                     children:
@@ -1274,11 +1095,7 @@
                                             { name: '向其问学', value: 50 },
                                             { name: '奏录其文', value: 11 },
                                         ]
-                                }
-                                ,
-
-
-
+                                },
                                 {
                                     name: '学术襄助',
                                     children:
@@ -1289,10 +1106,7 @@
                                             { name: '刊刻著述', value: 14 },
 
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '学术主题相近',
                                     children:
@@ -1302,10 +1116,7 @@
                                             { name: '从学', value: 372 },
 
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '师生关系',
                                     children:
@@ -1320,7 +1131,6 @@
                                 }
                             ]
                         },
-
                         {
                             name: '朋友关系类',
                             children: [
@@ -1340,14 +1150,11 @@
                                         ]
                                 }
 
-                            ]                        
-},
-
+                            ]
+                        },
                         {
                             name: '政治关系类',
                             children: [
-
-
                                 {
                                     name: '官场关系（平级）',
                                     children:
@@ -1355,9 +1162,7 @@
                                             { name: '同僚', value: 548 },
 
                                         ]
-                                }
-                                ,
-
+                                },
                                 {
                                     name: '官场关系（上司）',
                                     children:
@@ -1367,9 +1172,7 @@
                                             { name: '部将为Y', value: 249 },
                                             { name: '辟', value: 110 },
                                         ]
-                                }
-                                ,
-
+                                },
                                 {
                                     name: '官场关系（下属）',
                                     children:
@@ -1382,10 +1185,7 @@
 
 
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '荐举保任',
                                     children:
@@ -1397,11 +1197,7 @@
                                             { name: '被Y推荐', value: 1206 },
 
                                         ]
-                                }
-                                ,
-
-
-
+                                },
                                 {
                                     name: '政治奥援',
                                     children:
@@ -1435,10 +1231,7 @@
 
 
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '政治对抗',
                                     children:
@@ -1479,10 +1272,7 @@
 
 
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '政治关系（笼统）',
                                     children:
@@ -1492,10 +1282,8 @@
 
                                         ]
                                 }
-
                             ]
                         },
-
                         {
                             name: '著述关系类',
                             children: [
@@ -1510,9 +1298,7 @@
                                             { name: '为Y撰写学术源宗', value: 6 },
 
                                         ]
-                                }
-                                ,
-
+                                },
                                 {
                                     name: '记咏文字',
                                     children:
@@ -1529,9 +1315,7 @@
                                             { name: '为Y作世系碑记', value: 237 },
 
                                         ]
-                                }
-                                ,
-
+                                },
                                 {
                                     name: '礼仪文字',
                                     children:
@@ -1545,10 +1329,7 @@
 
 
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '论说文字',
                                     children:
@@ -1558,11 +1339,7 @@
                                             { name: '字说、名述由Y所作', value: 456 },
 
                                         ]
-                                }
-                                ,
-
-
-
+                                },
                                 {
                                     name: '墓志文字',
                                     children:
@@ -1583,10 +1360,7 @@
 
 
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '书札文字',
                                     children:
@@ -1596,10 +1370,7 @@
                                         { name: '致书Y', value: 3267 },
 
                                         ]
-                                }
-                                ,
-
-
+                                },
                                 {
                                     name: '序跋文字',
                                     children:
@@ -1630,8 +1401,7 @@
 
 
                                         ]
-                                }
-                                ,
+                                },
                                 {
                                     name: '应酬文字',
                                     children:
@@ -1653,11 +1423,8 @@
                                             { name: '为Y作砚铭', value: 33 }
                                         ]
                                 }
-
                             ]
                         },
-
-
                         {
                             name: '军事关系类',
                             children: [
@@ -1674,9 +1441,7 @@
                                             { name: '叛军遭到Y的抵御或讨平', value: 94 }
 
                                         ]
-                                }
-                                ,
-
+                                },
                                 {
                                     name: '军事支持',
                                     children:
@@ -1688,12 +1453,8 @@
 
                                         ]
                                 }
-
-
                             ]
                         },
-
-
                         {
                             name: '医疗关系类',
                             children: [
@@ -1708,9 +1469,8 @@
                                         ]
                                 }
 
-                            ]                        
-},
-
+                            ]
+                        },
                         {
                             name: '宗教关系类',
                             children: [
@@ -1724,13 +1484,7 @@
                                 }
 
                             ]
-                        }
-
-                        ,
-
-
-
-
+                        },
                         {
                             name: '家庭关系类',
                             children: [
@@ -1751,9 +1505,6 @@
 
                             ]
                         },
-
-
-
                         {
                             name: '财务关系类',
                             children: [
@@ -1770,85 +1521,37 @@
                                             { name: '为Y所葬', value: 16 }
                                         ]
                                 }
-
-
-
-                            ]                        
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                            ]
+                        }
                     ],
-
-
-
                     radius: [0, '95%'],
-
                     levels: [{},
                     {
-
                         r0: '15%',
-
                         r: '30%',
-
                         itemStyle: {
                             borderWidth: 2
                         },
-
-
-
                     },
                     {
-
                         r0: '32%',
-
                         r: '70%',
-
                         label: {
                             align: 'right', fontSize: 15
                         }
-
                     },
-
-
                     {
-
                         r0: '73%',
-
                         r: '75%',
-
                         label: {
                             show: false, position: 'outside', padding: 10, silent: true,
                             fontSize: 10
                         },
-
-
-                        itemStyle: {                            
-borderWidth: 3
+                        itemStyle: {
+                            borderWidth: 3
                         }
-
                     }
                     ]
-
                 }
             };
             myChart.setOption(option);   
