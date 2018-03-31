@@ -11,6 +11,8 @@ Three baidu echarts in a carousel page.
 
 <img src="https://github.com/Peefy/ThreeEChartInOne/blob/master/images/1.png"/>
 
+<img src="https://github.com/Peefy/ThreeEChartInOne/blob/master/images/1.png"/>
+
 ## Tip
 
 If you like it or it help you.Thanks for *fork* and *star* !
