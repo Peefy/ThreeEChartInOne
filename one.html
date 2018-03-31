@@ -46,7 +46,6 @@
             var myChart = echarts.init(document.getElementById('main1'));
             // 指定图表的配置项和数据
             option = {
-
                 tooltip: {
                     trigger: 'axis',
                     axisPointer: {
@@ -343,23 +342,23 @@
                     }
                 },
                 visualMap: {
-                    show: false,
+                    show: true,
                     dimension: 0,
                     pieces:
-                        [{ gt: 1, lte: 49, color: 'red' },
-                        { gt: 49, lte: 93, color: 'orange' },
-                        { gt: 93, lte: 98, color: 'yellow' },
-                        { gt: 98, lte: 103, color: 'green' },
-                        { gt: 103, lte: 113, color: 'cyan' },
-                        { gt: 113, lte: 130, color: 'blue' },
-                        { gt: 130, lte: 133, color: 'purple' },
-                        { gt: 133, lte: 162, color: 'grey' },
-                        { gt: 162, lte: 168, color: 'white' },
-                        { gt: 168, lte: 195, color: 'brown' },
-                        { gt: 195, lte: 199, color: 'camel' },
-                        { gt: 199, lte: 208, color: 'chocolate' },
-                        { gt: 208, lte: 236, color: 'ivory' },
-                        { gt: 236, color: 'green' },]
+                        [{ gt: 1, lte: 49, color: 'red', label: 'asdadsa'},
+                        { gt: 49, lte: 93, color: 'orange', label: 'asdadsa' },
+                        { gt: 93, lte: 98, color: 'yellow', label: 'asdadsa' },
+                        { gt: 98, lte: 103, color: 'green', label: 'asdadsa' },
+                        { gt: 103, lte: 113, color: 'cyan', label: 'asdadsa' },
+                        { gt: 113, lte: 130, color: 'blue', label: 'asdadsa' },
+                        { gt: 130, lte: 133, color: 'purple', label: 'asdadsa' },
+                        { gt: 133, lte: 162, color: 'grey', label: 'asdadsa' },
+                        { gt: 162, lte: 168, color: 'white', label: 'asdadsa' },
+                        { gt: 168, lte: 195, color: 'brown', label: 'asdadsa' },
+                        { gt: 195, lte: 199, color: 'camel', label: 'asdadsa' },
+                        { gt: 199, lte: 208, color: 'chocolate', label: 'asdadsa' },
+                        { gt: 208, lte: 236, color: 'ivory', label: 'asdadsa' },
+                        { gt: 236, color: 'green', label: 'asdadsa' },]
                 },
                 series: [{
                     name: '用电量',
@@ -628,6 +627,17 @@
                         15,
                         4
                     ],
+                    markArea: {
+                        data: [ [{
+                            xAxis: '我'
+                        }, {
+                            xAxis: '是'
+                        }], [{
+                            xAxis: '拟'
+                        }, {
+                            xAxis: '21:15'
+                        }] ]
+                    }
                 }]
             };
             myChart.setOption(option);
